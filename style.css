@@ -61,6 +61,6 @@ a {
 
 }
 .topNavBar>nav a:hover {
-    border-bottom-color: 3px solid #e06567; 
+    border-bottom: 3px solid #e06567; 
 }
 
