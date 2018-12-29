@@ -56,10 +56,14 @@
                         <dd>25</dd>
                         <dt>所在城市</dt>
                         <dd>深圳</dd>
-                        <dt>邮箱</dt>
-                        <dd>373940255@qq.com</dd>
                         <dt>手机</dt>
                         <dd>13162377663</dd>
+                        <dt>毕业院校</dt>
+                        <dd>上海理工大学</dd>
+                        <dt>专业</dt>
+                        <dd>机械工程</dd>
+                        <dt>邮箱</dt>
+                        <dd>373940255@qq.com</dd>
                     </dl>
                 </div>
             </div>   
@@ -86,33 +90,87 @@
                 </a>
             </footer>
         </div>
-        <a href="#" class="button">下载PDF简历</a>
-        <p>孙炎，初级前端工程师。</p>
+        <div class="selfIntroductionWrapper">
+            <a href="./text/个人简历.pdf" class="selfIntroduction" target="_blank" download>下载PDF简历</a>
+        </div>
+        <p class="introductionText">孙炎，初级前端工程师。2019应届硕士研究生，擅长前端技术。</p>
     </main>
-    <section>
+    <section class="skills">
         <h2>技能</h2>
-        <ol>
-            <li>HTML 5&amp; CSS 3</li>
-            <li>JavaScript</li>
-            <li>jQuery</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>HTTP</li>
+        <ol class="clearfix">
+            <li>
+                <h3> HTML 5&amp; CSS 3</h3>
+                <div class="progressBar">
+                    <div class="progressBarShow" style="width:70%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3> JavaScript</h3>
+                <div class="progressBar">
+                    <div class="progressBarShow" style="width:80%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3> jQuery</h3>
+                <div class="progressBar">
+                    <div class="progressBarShow" style="width:60%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3> Vue</h3>
+                <div class="progressBar">
+                    <div class="progressBarShow" style="width:60%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3> Node.js</h3>
+                <div class="progressBar">
+                    <div class="progressBarShow" style="width:50%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3> React.js</h3>
+                <div class="progressBar">
+                    <div class="progressBarShow" style="width:55%;"></div>
+                </div>
+            </li>
         </ol>
     </section>
-    <section>
+    <section class="portfilo">
         <h2>作品集</h2>
         <nav>
-            <ol>
-                <li>所有项目</li>
-                <li>框架项目</li>
-                <li>原生JS&amp;CSS</li>
+            <ol class="clearfix">
+                <li id="portfilall1">所有项目</li>
+                <li id="portfilall2">框架项目</li>
+                <li id="portfilall3">原生JS&amp;CSS</li>
             </ol>
+            <div class="bar">
+                <div id="portfilBar" class="barShow-1"></div>
+            </div>
         </nav>
+        <script>
+            portfilall1.onclick = function() {
+                portfilBar.className = "barShow-1"
+            }
+
+            portfilall2.onclick = function() {
+                portfilBar.className = "barShow-2"
+            }
+
+            portfilall3.onclick = function() {
+                portfilBar.className = "barShow-3"
+            }
+        </script>
         <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+            <div class="big" style="top:30px; left:0;">
+                <img src="./images/port1.jpg" alt="作品1">
+            </div>
+            <div class="small" style="top:30px; right:0;">
+                <img src="./images/port2.jpg" alt="作品2">
+            </div>
+            <div class="small" style="bottom:-35px; right: 0;">
+                <img src="./images/port3.jpg" alt="作品3">
+            </div>
         </div>
     </section>
 </body>
