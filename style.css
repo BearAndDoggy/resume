@@ -262,6 +262,9 @@ section.portfilo nav {
     background: #fff;
     border-radius: 8px;
 }
+#portfilBar {
+    transition: all 0.3s;
+}
 
 .portfilo .barShow-1 {
     margin-left: 0px;
