@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./loading.css">
+    <link rel="stylesheet" href="./style.css"> 
     <script src="//at.alicdn.com/t/font_991324_bhu5t8jn3w.js"></script>
     <title>孙炎的个人简历</title>
     <style type="text/css">
-        .icon {
-           width: 1em; height: 1em;
-           vertical-align: -0.15em;
-           fill: currentColor;
-           overflow: hidden;
-        }
+
     </style>
 </head>
+
 <body>
+    <div id="site-wrapper" class="wrapper active">
+        <div class="loading"></div>
+    </div>
     <div class="topNavBar">
         <div class="topNavBar-inner clearfix">
             <a class="logo" href="#" alt="logo">
-                    <span class="rs">RS</span><span class="card">card</span>
-                </a>
-                <nav>
-                    <ul class="clearfix">
-                        <li><a href="">关于</a></li>
-                        <li><a href="">技能</a></li>
-                        <li><a href="">作品</a></li>
-                        <li><a href="">博客</a></li>
-                        <li><a href="">日历</a></li>
-                        <li><a href="">联系方式</a></li>
-                        <li><a href="">其他</a></li>
-                    </ul>
-                </nav>
-        </div>  
+                <span class="rs">RS</span><span class="card">card</span>
+            </a>
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="">关于</a></li>
+                    <li><a href="">技能</a></li>
+                    <li><a href="">作品</a></li>
+                    <li><a href="">博客</a></li>
+                    <li><a href="">日历</a></li>
+                    <li><a href="">联系方式</a></li>
+                    <li><a href="">其他</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
     <div class="banner">
         <div class="mask"></div>
@@ -47,7 +48,7 @@
                 <div class="text">
                     <span class="welcome">Hello
                         <span class="triangle"></span>
-                    </span>  
+                    </span>
                     <h1>孙炎</h1>
                     <p>前端开发工程师</p>
                     <hr>
@@ -66,7 +67,7 @@
                         <dd>373940255@qq.com</dd>
                     </dl>
                 </div>
-            </div>   
+            </div>
             <footer class="media">
                 <a href="#">
                     <svg class="icon" aria-hidden="true">
@@ -149,15 +150,15 @@
             </div>
         </nav>
         <script>
-            portfilall1.onclick = function() {
+            portfilall1.onclick = function () {
                 portfilBar.className = "barShow-1"
             }
 
-            portfilall2.onclick = function() {
+            portfilall2.onclick = function () {
                 portfilBar.className = "barShow-2"
             }
 
-            portfilall3.onclick = function() {
+            portfilall3.onclick = function () {
                 portfilBar.className = "barShow-3"
             }
         </script>
@@ -173,5 +174,7 @@
             </div>
         </div>
     </section>
+    <script src="./main.js"></script>
 </body>
+
 </html>

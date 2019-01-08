@@ -1,15 +1,42 @@
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: gray;
+}
+
+.wrapper.active {
+    display: flex;
+}
+
 body {
-    background:#efefef;
+    background: #efefef;
     margin: 0;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 * {
     margin: 0;
     padding: 0;
 }
+
 .clearfix::after {
     content: '';
     display: block;
@@ -20,9 +47,11 @@ a {
     width: 100%;
     position: fixed;
 }
+
 .topNavBar-inner {
     padding: 20px 16px;
 }
+
 .topNavBar .logo {
     float: left;
     font-size: 24px;
@@ -30,10 +59,12 @@ a {
     padding-top: 3px;
     padding-bottom: 4px;
 }
+
 .topNavBar .logo>.rs {
     color: #e6686a;
     margin-right: 4px;
 }
+
 .topNavBar .logo>.card {
     color: #9A9DA2
 }
@@ -42,6 +73,7 @@ a {
     float: right;
     padding-top: 10px;
 }
+
 .topNavBar nav>ul {
     list-style: none;
     padding: 0;
@@ -56,7 +88,7 @@ a {
 
 .topNavBar nav>ul>li>a {
     font-size: 12px;
-    color:#b7b7b7;
+    color: #b7b7b7;
     text-decoration: none;
     font-weight: bold;
     border-top: 3px solid transparent;
@@ -65,8 +97,9 @@ a {
     padding-bottom: 5px;
 
 }
+
 .topNavBar nav a:hover {
-    border-bottom: 3px solid #e06567; 
+    border-bottom: 3px solid #e06567;
 }
 
 .banner {
@@ -86,8 +119,9 @@ a {
     max-width: 940px;
     background: #ffffff;
     margin-top: -350px;
-    box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.5);
 }
+
 .userCard .welcome {
     background: #E6686A;
     color: white;
@@ -107,18 +141,21 @@ a {
     left: 4px;
     top: 100%;
 }
+
 .pictureAndText {
     padding: 50px;
 }
+
 .picture {
     float: left;
 }
+
 .userCard .text>h1 {
     margin-top: 18px;
 }
 
 .userCard .text>hr {
-   margin: 20px 0;
+    margin: 20px 0;
 }
 
 .text {
@@ -142,11 +179,13 @@ a {
     width: 70%;
     color: #9da0a7;
 }
+
 .userCard footer.media {
     background: #E6686A;
     text-align: center;
 }
-.userCard footer.media > a {
+
+.userCard footer.media>a {
     display: inline-block;
     padding: 5px 0;
     margin: 16px;
@@ -155,7 +194,7 @@ a {
     line-height: 30px;
 }
 
-.userCard footer.media > a:hover {
+.userCard footer.media>a:hover {
     background: #CF5D5F;
 }
 
@@ -165,10 +204,12 @@ a {
     height: 30px;
     vertical-align: top;
 }
-main > .selfIntroductionWrapper {
+
+main>.selfIntroductionWrapper {
     text-align: center;
 }
-main > .selfIntroductionWrapper > a {
+
+main>.selfIntroductionWrapper>a {
     font-size: 14px;
     font-weight: bold;
     line-height: 16px;
@@ -181,10 +222,11 @@ main > .selfIntroductionWrapper > a {
     transition: 0.3s;
 }
 
-main > .selfIntroductionWrapper > a:hover {
-    box-shadow: -1px 4px 14px 2px rgba(0,0,0,0.58);
+main>.selfIntroductionWrapper>a:hover {
+    box-shadow: -1px 4px 14px 2px rgba(0, 0, 0, 0.58);
 }
-main > .introductionText {
+
+main>.introductionText {
     max-width: 940px;
     margin: 0 auto;
     text-align: center;
@@ -192,17 +234,19 @@ main > .introductionText {
     font-size: 20px;
     line-height: 22px;
 }
+
 section.skills,
 section.portfilo {
     margin: 70px auto 0;
 }
+
 section.skills ol {
     max-width: 940px;
     margin: 0 auto;
     background: #fff;
     list-style: none;
     padding: 50px 65px 0px;
-    box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -218,13 +262,14 @@ section.skills ol li:nth-child(even) {
     padding-right: 0;
 }
 
-section.skills ol li h3{
+section.skills ol li h3 {
     font-weight: normal;
     font-size: 14px;
     line-height: 1.1;
     font-family: "Open";
     margin-bottom: 5px;
 }
+
 section.skills h2,
 section.portfilo h2 {
     color: #3d4451;
@@ -235,6 +280,7 @@ section.portfilo h2 {
     margin-bottom: 35px;
 
 }
+
 section.skills .progressBar {
     height: 8px;
     background: #fae1e1;
@@ -248,20 +294,24 @@ section.skills .progressBarShow {
     border-radius: 8px;
 
 }
+
 section.portfilo {
     text-align: center;
     width: 920px;
 }
+
 section.portfilo nav {
     display: inline-block;
     cursor: pointer;
 }
+
 .portfilo .bar {
     margin-top: 20px;
-    height:6px;
+    height: 6px;
     background: #fff;
     border-radius: 8px;
 }
+
 #portfilBar {
     transition: all 0.3s;
 }
@@ -274,6 +324,7 @@ section.portfilo nav {
     border-radius: 8px;
 
 }
+
 .portfilo .barShow-2 {
     margin-left: 104px;
     height: 100%;
@@ -282,6 +333,7 @@ section.portfilo nav {
     border-radius: 8px;
 
 }
+
 .portfilo .barShow-3 {
     margin-left: 208px;
     height: 100%;
@@ -290,26 +342,31 @@ section.portfilo nav {
     border-radius: 8px;
 
 }
+
 section.portfilo ol {
     font-weight: bold;
     list-style: none;
     display: inline-block;
     vertical-align: top;
-    
+
 }
+
 section.portfilo ol li {
     float: left;
-    margin-left: 40px;   
+    margin-left: 40px;
 }
 
 section.portfilo ol li:first-child {
-    margin-left: 0;   
+    margin-left: 0;
 }
+
 .jobs {
     margin-bottom: 150px;
     position: relative;
     height: 576px;
 }
-.small,.big {
+
+.small,
+.big {
     position: absolute;
 }
