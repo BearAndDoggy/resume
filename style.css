@@ -4,6 +4,10 @@
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
+    fill: white;
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
 }
 
 .wrapper {
@@ -37,7 +41,9 @@ a {
     margin: 0;
     padding: 0;
 }
-ul,ol {
+
+ul,
+ol {
     list-style: none;
 }
 
@@ -47,6 +53,16 @@ ul,ol {
     clear: both;
 }
 
+[data-x] {
+    transform: translateY(200px);
+    transition: all 0.5s;
+}
+
+[data-x].offSet {
+    transform: translateY(0px);
+
+}
+
 .topNavBar {
     width: 100%;
     position: fixed;
@@ -54,10 +70,11 @@ ul,ol {
     transition: all 0.8s;
 }
 
-.topNavBar.background {
+.topNavBar.navBackground {
     background: rgba(255, 255, 255, 0.99);
     color: black;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .topNavBar-inner {
@@ -113,7 +130,8 @@ ul,ol {
     display: block;
 }
 
-.topNavBar nav>ul>li.active1> a::after {
+.topNavBar nav>ul>li.active1>a::after,
+.topNavBar nav>ul>li.highLight>a::after {
     position: absolute;
     content: "";
     display: block;
@@ -122,23 +140,24 @@ ul,ol {
     top: 100%;
     left: 0;
     width: 100%;
-    animation: menuSlider 0.3s; 
+    animation: menuSlider 0.3s;
 }
 
-.topNavBar nav>ul>li> .navSlider{
+.topNavBar nav>ul>li>.navSlider {
     position: absolute;
     right: 0;
     top: 100%;
     display: none;
     background: white;
     color: #3d4451;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.topNavBar nav>ul>li.active1 > .navSlider{
+.topNavBar nav>ul>li.active1>.navSlider {
     display: block;
     animation: navSlider 0.3s;
 }
+
 @keyframes navSlider {
     0% {
         margin-right: 100%;
@@ -149,7 +168,7 @@ ul,ol {
     }
 }
 
-.topNavBar nav>ul>li> .navSlider li{
+.topNavBar nav>ul>li>.navSlider li {
     white-space: nowrap;
     padding: 5px 10px;
     cursor: pointer;
@@ -158,7 +177,7 @@ ul,ol {
 
 
 @keyframes menuSlider {
-    0%  {
+    0% {
         width: 0%;
     }
 
@@ -263,12 +282,7 @@ ul,ol {
     background: #CF5D5F;
 }
 
-.userCard svg {
-    fill: white;
-    width: 30px;
-    height: 30px;
-    vertical-align: top;
-}
+.userCard svg {}
 
 main>.selfIntroductionWrapper {
     text-align: center;
@@ -350,6 +364,7 @@ section.skills .progressBar {
     height: 8px;
     background: #fae1e1;
     border-radius: 8px;
+    overflow: hidden;
 }
 
 section.skills .progressBarShow {
@@ -357,7 +372,12 @@ section.skills .progressBarShow {
     height: 100%;
     background: #e8676b;
     border-radius: 8px;
+    transition: all 1s;
+    transform: translateX(-100%);
+}
 
+section.skills.offSet .progressBarShow {
+    transform: translateX(0%);
 }
 
 section.portfilo {
