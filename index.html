@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./loading.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>孙炎的个人简历</title>
 </head>
 
@@ -149,32 +150,28 @@
     </section>
     <section data-x="" id="sitePortfolio" class="portfilo">
         <h2>作品集</h2>
-        <nav>
-            <ol class="clearfix">
-                <li id="portfilall1">所有项目</li>
-                <li id="portfilall2">框架项目</li>
-                <li id="portfilall3">原生JS&amp;CSS</li>
-            </ol>
-            <div class="bar">
-                <div id="portfilBar" class="barShow-1"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <img class="swiper-slide" src="./images/port1.jpg" alt="">
+                <img class="swiper-slide" src="./images/port2.jpg" alt="">
+                <img class="swiper-slide" src="./images/port3.jpg" alt="">
             </div>
-        </nav>
-        <div class="jobs">
-            <div class="big" style="top:30px; left:0;">
-                <img src="./images/port1.jpg" alt="作品1">
-            </div>
-            <div class="small" style="top:30px; right:0;">
-                <img src="./images/port2.jpg" alt="作品2">
-            </div>
-            <div class="small" style="bottom:-35px; right: 0;">
-                <img src="./images/port3.jpg" alt="作品3">
-            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>         
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </section>
-    <script src="./Tween.js"></script>
+    <script src="./js/Tween.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script src="//at.alicdn.com/t/font_991324_2j82cvpshnp.js"></script>
-
-    <script src="./main.js"></script>
+       
+    <script src="./js/init-swiper.js"></script>
+    <script src="./js/clickSmoothScroll.js"></script>
+    <script src="./js/topNavBar-sticky.js"></script>
+    <script src="./js/highLightClosetElement.js"></script>
+    <script src="./js/topNavMouseActive.js"></script>
+    <script src="./js/loading.js"></script>
 </body>
-
 </html>
