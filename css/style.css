@@ -356,7 +356,8 @@ section.skills ol li h3 {
 }
 
 section.skills h2,
-section.portfilo h2 {
+section.portfilo h2,
+section#message h2 {
     color: #3d4451;
     font-size: 34px;
     line-height: 1.2;
@@ -381,7 +382,26 @@ section.skills .progressBarShow {
     transition: all 1s;
     transform: translateX(-100%);
 }
-
+    
 section.skills.offSet .progressBarShow {
     transform: translateX(0%);
+}
+section#message {
+    margin-bottom: 100px;
+}
+section#message ol {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    border-top: 1px solid grey;
+}
+
+section#message ol li{
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid grey;
+}
+
+section#message form {
+    max-width: 800px;
+    margin: 0 auto;
 }
