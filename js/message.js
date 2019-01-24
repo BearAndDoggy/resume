@@ -1,4 +1,4 @@
-! function () {
+!function () {
     var view = $('.message')
     var model = {
         init: function () {
@@ -25,14 +25,8 @@
         }
     }
 
-    var controller = {
-        view: null,
-        model: null,
-        init: function (view, model) {
-            this.view = view
-            this.model = model
-            this.model.init()
-            this.bindEvents()
+    var controller = Controller({
+        init: function() {
             this.loadMessage()
         },
 
@@ -73,6 +67,7 @@
             }
 
         }
-    }
+    })
+
     controller.init(view, model)
 }.call()
