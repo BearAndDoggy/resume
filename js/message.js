@@ -58,11 +58,20 @@
         saveMessage: function () {
             var message = $('input[name=text]').val()
             var name = $('input[name=name]').val()
-            this.model.save(message, name).then(function () {
-                var li = $('<li></li>').text(`${name}：${message}`)
-                $('.messageList').append(li)
-                $('input[name=text]').val('')
-            })
+            if (name === '' && message != '') {
+                alert('昵称不能为空呦！')
+            } else if (name != '' && message === '') {
+                alert('留言不能为空呦')
+            } else if (name === '' && message === '') {
+                alert('昵称与留言不能为空呦')
+            } else {
+                this.model.save(message, name).then(function () {
+                    var li = $('<li></li>').text(`${name}：${message}`)
+                    $('.messageList').append(li)
+                    $('input[name=text]').val('')
+                })
+            }
+
         }
     }
     controller.init(view, model)
